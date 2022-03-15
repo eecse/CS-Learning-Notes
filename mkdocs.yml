@@ -84,5 +84,7 @@ nav:
     - '数学课程': '数学课/index.md'
   - 专业课:
     - '专业课程': '专业课/index.md'
+  - Matlab:
+    - 'Matlab': 'Matlab/index.md'
   - 随笔:
     - '测试': '测试/test.md'
