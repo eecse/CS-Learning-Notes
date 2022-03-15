@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://team.eecs.pro/CS-Learning-Notes/</loc>
+         <loc>https://team.eecs.pro/</loc>
          <lastmod>2022-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://team.eecs.pro/CS-Learning-Notes/%E4%B8%93%E4%B8%9A%E8%AF%BE/</loc>
+         <loc>https://team.eecs.pro/%E4%B8%93%E4%B8%9A%E8%AF%BE/</loc>
          <lastmod>2022-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://team.eecs.pro/CS-Learning-Notes/%E6%95%B0%E5%AD%A6%E8%AF%BE/</loc>
+         <loc>https://team.eecs.pro/%E6%95%B0%E5%AD%A6%E8%AF%BE/</loc>
          <lastmod>2022-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://team.eecs.pro/CS-Learning-Notes/%E6%A0%B8%E5%BF%83%E8%AF%BE/</loc>
+         <loc>https://team.eecs.pro/%E6%A0%B8%E5%BF%83%E8%AF%BE/</loc>
+         <lastmod>2022-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://team.eecs.pro/%E6%B5%8B%E8%AF%95/test/</loc>
          <lastmod>2022-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
