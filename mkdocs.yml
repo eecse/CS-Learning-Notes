@@ -1,5 +1,5 @@
 site_name: 计算机学习笔记
-site_url: https://team.eecs.pro/CS-Learning-Notes
+site_url: https://team.eecs.pro/
 site_author: Bobby
 site_description: >-
   我的笔记
@@ -75,3 +75,5 @@ nav:
     - '数学课程': '数学课/index.md'
   - 专业课:
     - '专业课程': '专业课/index.md'
+  - 随笔:
+    - '测试': '测试/test.md'
