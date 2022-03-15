@@ -84,8 +84,9 @@ nav:
     - '数学课程': '数学课/index.md'
   - 专业课:
     - '专业课程': '专业课/index.md'
-  - Matlab:
-    - 'Matlab': 'Matlab/index.md'
+  - 科学计算:
+    - 'Matlab': '科学计算/matlab.md'
+    - 'Julia': '科学计算/julia.md'
   - Latex:
     - 'Latex': 'Latex/index.md'
   - Linux:
