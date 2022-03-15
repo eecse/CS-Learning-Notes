@@ -65,7 +65,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/PointBreaker/UCB-Tutorial
+      link: https://github.com/PointBreaker/CS-Learning-Notes
 
 nav:
   - 前言: 'index.md'
