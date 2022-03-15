@@ -1,1 +1,77 @@
-site_name: My Docs
+site_name: 加州大学伯克利分校计算机课程笔记
+site_url: https://pointbreaker.github.io
+site_author: Bobby
+site_description: >-
+  加州大学伯克利分校课程笔记
+
+repo_name: UCB-Tutorial
+repo_url: https://github.com/PointBreaker/UCB-Tutorial
+
+theme:
+  name: material
+  language: zh
+
+  static_templates:
+    - 404.html
+
+  include_search_page: false
+  search_index_only: true
+
+  features:
+    - header.autohide
+    # - navigation.instant
+    # - navigation.expand
+    # - navigation.sections
+    - navigation.tracking
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    # - navigation.indexes
+    - search.highlight
+    - search.share
+    - search.suggest
+    # - toc.integrate
+    - content.code.annotate
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: cyan
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search:
+      lang: ja
+  - git-revision-date-localized
+  - minify:
+      minify_html: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/PointBreaker/UCB-Tutorial
+
+nav:
+  - 前言: 'index.md'
+  - 核心课:
+    - '核心课程': '核心课/index.md'
+  - 数学课:
+    - '数学课程': '数学课/index.md'
+  - 专业课:
+    - '专业课程': '专业课/index.md'
