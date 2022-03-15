@@ -1,0 +1,284 @@
+<!doctype html><html lang=zh class=no-js> <head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content=我的笔记><meta name=author content=Bobby><link href=https://team.eecs.pro/%E7%A7%91%E5%AD%A6%E8%AE%A1%E7%AE%97/matlab/ rel=canonical><link rel=icon href=../../assets/images/favicon.png><meta name=generator content="mkdocs-1.2.3, mkdocs-material-8.2.5"><title>Matlab - 计算机学习笔记</title><link rel=stylesheet href=../../assets/stylesheets/main.2d9f7617.min.css><link rel=stylesheet href=../../assets/stylesheets/palette.e6a45f82.min.css><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"><style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style><script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script></head> <body dir=ltr data-md-color-scheme=default data-md-color-primary=light-blue data-md-color-accent=deep-purple> <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script> <input class=md-toggle data-md-toggle=drawer type=checkbox id=__drawer autocomplete=off> <input class=md-toggle data-md-toggle=search type=checkbox id=__search autocomplete=off> <label class=md-overlay for=__drawer></label> <div data-md-component=skip> <a href=#matlab class=md-skip> 跳转至 </a> </div> <div data-md-component=announce> </div> <header class=md-header data-md-component=header> <nav class="md-header__inner md-grid" aria-label=页眉> <a href=../.. title=计算机学习笔记 class="md-header__button md-logo" aria-label=计算机学习笔记 data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg> </a> <label class="md-header__button md-icon" for=__drawer> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg> </label> <div class=md-header__title data-md-component=header-title> <div class=md-header__ellipsis> <div class=md-header__topic> <span class=md-ellipsis> 计算机学习笔记 </span> </div> <div class=md-header__topic data-md-component=header-topic> <span class=md-ellipsis> Matlab </span> </div> </div> </div> <form class=md-header__option data-md-component=palette> <input class=md-option data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme=default data-md-color-primary=light-blue data-md-color-accent=deep-purple aria-label="Switch to dark mode" type=radio name=__palette id=__palette_1> <label class="md-header__button md-icon" title="Switch to dark mode" for=__palette_2 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg> </label> <input class=md-option data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme=slate data-md-color-primary=cyan data-md-color-accent=deep-purple aria-label="Switch to light mode" type=radio name=__palette id=__palette_2> <label class="md-header__button md-icon" title="Switch to light mode" for=__palette_1 hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg> </label> </form> <label class="md-header__button md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg> </label> <div class=md-search data-md-component=search role=dialog> <label class=md-search__overlay for=__search></label> <div class=md-search__inner role=search> <form class=md-search__form name=search> <input type=text class=md-search__input name=query aria-label=搜索 placeholder=搜索 autocapitalize=off autocorrect=off autocomplete=off spellcheck=false data-md-component=search-query required> <label class="md-search__icon md-icon" for=__search> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </label> <nav class=md-search__options aria-label=查找> <a href=javascript:void(0) class="md-search__icon md-icon" aria-label=分享 data-clipboard data-clipboard-text data-md-component=search-share tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg> </a> <button type=reset class="md-search__icon md-icon" aria-label=清空当前内容 tabindex=-1> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg> </button> </nav> <div class=md-search__suggest data-md-component=search-suggest></div> </form> <div class=md-search__output> <div class=md-search__scrollwrap data-md-scrollfix> <div class=md-search-result data-md-component=search-result> <div class=md-search-result__meta> 正在初始化搜索引擎 </div> <ol class=md-search-result__list></ol> </div> </div> </div> </div> </div> <div class=md-header__source> <a href=https://github.com/eecse/CS-Learning-Notes/ title=前往仓库 class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </div> <div class=md-source__repository> CS-Learning-Notes </div> </a> </div> </nav> </header> <div class=md-container data-md-component=container> <main class=md-main data-md-component=main> <div class="md-main__inner md-grid"> <div class="md-sidebar md-sidebar--primary" data-md-component=sidebar data-md-type=navigation> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--primary" aria-label=导航栏 data-md-level=0> <label class=md-nav__title for=__drawer> <a href=../.. title=计算机学习笔记 class="md-nav__button md-logo" aria-label=计算机学习笔记 data-md-component=logo> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg> </a> 计算机学习笔记 </label> <div class=md-nav__source> <a href=https://github.com/eecse/CS-Learning-Notes/ title=前往仓库 class=md-source data-md-component=source> <div class="md-source__icon md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </div> <div class=md-source__repository> CS-Learning-Notes </div> </a> </div> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../.. class=md-nav__link> 前言 </a> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_2 type=checkbox id=__nav_2> <label class=md-nav__link for=__nav_2> 核心课 <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=核心课 data-md-level=1> <label class=md-nav__title for=__nav_2> <span class="md-nav__icon md-icon"></span> 核心课 </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../%E6%A0%B8%E5%BF%83%E8%AF%BE/ class=md-nav__link> 核心课程 </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_3 type=checkbox id=__nav_3> <label class=md-nav__link for=__nav_3> 数学课 <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=数学课 data-md-level=1> <label class=md-nav__title for=__nav_3> <span class="md-nav__icon md-icon"></span> 数学课 </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../%E6%95%B0%E5%AD%A6%E8%AF%BE/ class=md-nav__link> 数学课程 </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_4 type=checkbox id=__nav_4> <label class=md-nav__link for=__nav_4> 专业课 <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=专业课 data-md-level=1> <label class=md-nav__title for=__nav_4> <span class="md-nav__icon md-icon"></span> 专业课 </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../%E4%B8%93%E4%B8%9A%E8%AF%BE/ class=md-nav__link> 专业课程 </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--active md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_5 type=checkbox id=__nav_5 checked> <label class=md-nav__link for=__nav_5> 科学计算 <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=科学计算 data-md-level=1> <label class=md-nav__title for=__nav_5> <span class="md-nav__icon md-icon"></span> 科学计算 </label> <ul class=md-nav__list data-md-scrollfix> <li class="md-nav__item md-nav__item--active"> <input class="md-nav__toggle md-toggle" data-md-toggle=toc type=checkbox id=__toc> <label class="md-nav__link md-nav__link--active" for=__toc> Matlab <span class="md-nav__icon md-icon"></span> </label> <a href=./ class="md-nav__link md-nav__link--active"> Matlab </a> <nav class="md-nav md-nav--secondary" aria-label=目录> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> 目录 </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#matlab_1 class=md-nav__link> Matlab基本语法 </a> <nav class=md-nav aria-label=Matlab基本语法> <ul class=md-nav__list> <li class=md-nav__item> <a href=#matlab_2 class=md-nav__link> 什么是Matlab </a> </li> <li class=md-nav__item> <a href=#matlab_3 class=md-nav__link> Matlab变量 </a> </li> <li class=md-nav__item> <a href=#matlab_4 class=md-nav__link> Matlab作为计算器 </a> </li> <li class=md-nav__item> <a href=#matlab_5 class=md-nav__link> Matlab 函数 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#_1 class=md-nav__link> 向量和矩阵的创建 </a> <nav class=md-nav aria-label=向量和矩阵的创建> <ul class=md-nav__list> <li class=md-nav__item> <a href=#_2 class=md-nav__link> 创建向量 </a> </li> <li class=md-nav__item> <a href=#_3 class=md-nav__link> 创建矩阵 </a> </li> <li class=md-nav__item> <a href=#_4 class=md-nav__link> 矩阵创建函数 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#_5 class=md-nav__link> 向量和矩阵的操作 </a> <nav class=md-nav aria-label=向量和矩阵的操作> <ul class=md-nav__list> <li class=md-nav__item> <a href=#_6 class=md-nav__link> 向量的计算 </a> </li> <li class=md-nav__item> <a href=#_7 class=md-nav__link> 访问矩阵元素 </a> </li> <li class=md-nav__item> <a href=#_8 class=md-nav__link> 矩阵的统计函数 </a> </li> <li class=md-nav__item> <a href=#_9 class=md-nav__link> 指定数组的大小和长度 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#_10 class=md-nav__link> 图像处理工具包 </a> <nav class=md-nav aria-label=图像处理工具包> <ul class=md-nav__list> <li class=md-nav__item> <a href=#_11 class=md-nav__link> 加载与保存图像 </a> </li> <li class=md-nav__item> <a href=#_12 class=md-nav__link> 图像矩阵处理 </a> </li> <li class=md-nav__item> <a href=#_13 class=md-nav__link> 转换图像数据类型 </a> </li> <li class=md-nav__item> <a href=#_14 class=md-nav__link> 空间图像过滤 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#matlab_6 class=md-nav__link> Matlab流程控制 </a> <nav class=md-nav aria-label=Matlab流程控制> <ul class=md-nav__list> <li class=md-nav__item> <a href=#for class=md-nav__link> 写一个for循环 </a> </li> <li class=md-nav__item> <a href=#if-else class=md-nav__link> If-ELSE语句 </a> </li> </ul> </nav> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=../julia/ class=md-nav__link> Julia </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_6 type=checkbox id=__nav_6> <label class=md-nav__link for=__nav_6> Latex <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Latex data-md-level=1> <label class=md-nav__title for=__nav_6> <span class="md-nav__icon md-icon"></span> Latex </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../Latex/ class=md-nav__link> Latex </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_7 type=checkbox id=__nav_7> <label class=md-nav__link for=__nav_7> Linux <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=Linux data-md-level=1> <label class=md-nav__title for=__nav_7> <span class="md-nav__icon md-icon"></span> Linux </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../Linux/shell/ class=md-nav__link> Shell </a> </li> <li class=md-nav__item> <a href=../../Linux/script/ class=md-nav__link> Script </a> </li> </ul> </nav> </li> <li class="md-nav__item md-nav__item--nested"> <input class="md-nav__toggle md-toggle" data-md-toggle=__nav_8 type=checkbox id=__nav_8> <label class=md-nav__link for=__nav_8> 随笔 <span class="md-nav__icon md-icon"></span> </label> <nav class=md-nav aria-label=随笔 data-md-level=1> <label class=md-nav__title for=__nav_8> <span class="md-nav__icon md-icon"></span> 随笔 </label> <ul class=md-nav__list data-md-scrollfix> <li class=md-nav__item> <a href=../../%E6%B5%8B%E8%AF%95/test/ class=md-nav__link> 测试 </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class="md-sidebar md-sidebar--secondary" data-md-component=sidebar data-md-type=toc> <div class=md-sidebar__scrollwrap> <div class=md-sidebar__inner> <nav class="md-nav md-nav--secondary" aria-label=目录> <label class=md-nav__title for=__toc> <span class="md-nav__icon md-icon"></span> 目录 </label> <ul class=md-nav__list data-md-component=toc data-md-scrollfix> <li class=md-nav__item> <a href=#matlab_1 class=md-nav__link> Matlab基本语法 </a> <nav class=md-nav aria-label=Matlab基本语法> <ul class=md-nav__list> <li class=md-nav__item> <a href=#matlab_2 class=md-nav__link> 什么是Matlab </a> </li> <li class=md-nav__item> <a href=#matlab_3 class=md-nav__link> Matlab变量 </a> </li> <li class=md-nav__item> <a href=#matlab_4 class=md-nav__link> Matlab作为计算器 </a> </li> <li class=md-nav__item> <a href=#matlab_5 class=md-nav__link> Matlab 函数 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#_1 class=md-nav__link> 向量和矩阵的创建 </a> <nav class=md-nav aria-label=向量和矩阵的创建> <ul class=md-nav__list> <li class=md-nav__item> <a href=#_2 class=md-nav__link> 创建向量 </a> </li> <li class=md-nav__item> <a href=#_3 class=md-nav__link> 创建矩阵 </a> </li> <li class=md-nav__item> <a href=#_4 class=md-nav__link> 矩阵创建函数 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#_5 class=md-nav__link> 向量和矩阵的操作 </a> <nav class=md-nav aria-label=向量和矩阵的操作> <ul class=md-nav__list> <li class=md-nav__item> <a href=#_6 class=md-nav__link> 向量的计算 </a> </li> <li class=md-nav__item> <a href=#_7 class=md-nav__link> 访问矩阵元素 </a> </li> <li class=md-nav__item> <a href=#_8 class=md-nav__link> 矩阵的统计函数 </a> </li> <li class=md-nav__item> <a href=#_9 class=md-nav__link> 指定数组的大小和长度 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#_10 class=md-nav__link> 图像处理工具包 </a> <nav class=md-nav aria-label=图像处理工具包> <ul class=md-nav__list> <li class=md-nav__item> <a href=#_11 class=md-nav__link> 加载与保存图像 </a> </li> <li class=md-nav__item> <a href=#_12 class=md-nav__link> 图像矩阵处理 </a> </li> <li class=md-nav__item> <a href=#_13 class=md-nav__link> 转换图像数据类型 </a> </li> <li class=md-nav__item> <a href=#_14 class=md-nav__link> 空间图像过滤 </a> </li> </ul> </nav> </li> <li class=md-nav__item> <a href=#matlab_6 class=md-nav__link> Matlab流程控制 </a> <nav class=md-nav aria-label=Matlab流程控制> <ul class=md-nav__list> <li class=md-nav__item> <a href=#for class=md-nav__link> 写一个for循环 </a> </li> <li class=md-nav__item> <a href=#if-else class=md-nav__link> If-ELSE语句 </a> </li> </ul> </nav> </li> </ul> </nav> </div> </div> </div> <div class=md-content data-md-component=content> <article class="md-content__inner md-typeset"> <a href=https://github.com/eecse/CS-Learning-Notes/edit/master/docs/科学计算/matlab.md title=编辑此页 class="md-content__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg> </a> <h1 id=matlab>Matlab 基础与图像处理工具包</h1> <blockquote> <ul> <li>Matlab基本语法</li> <li>向量和矩阵的创建</li> <li>向量和矩阵的操作</li> <li>Matlab图像处理工具包</li> <li>Matlab的控制语句</li> </ul> </blockquote> <h2 id=matlab_1>Matlab基本语法</h2> <h3 id=matlab_2>什么是Matlab</h3> <blockquote> <p>Cleve Moler创造的一个用于数学，工程的计算工具。</p> <p>（就是这么简洁）</p> </blockquote> <h3 id=matlab_3>Matlab变量</h3> <blockquote> <p>变量命名规则和绝大多数编程语言一样，blablablah</p> </blockquote> <pre><code class=language-matlab># MATLAB Commands
+&gt;&gt; x = 1
+
+x =
+
+     1
+&gt;&gt; y1 = 3 * x^2 + 2*x -6; # 用`;`来抑制输出
+&gt;&gt; 3*pi^2 + 2*pi -6 # pi为matlab内置变量
+
+ans =
+
+   29.8920
+</code></pre> <h3 id=matlab_4>Matlab作为计算器</h3> <p>举例: <code>二次方程根的求解</code> $$ x = \frac{-b \pm \sqrt(b^2-4ac)}{2a} $$ 基本运算符：</p> <p>加: <code>+</code>;</p> <p>减: <code>-</code>;</p> <p>乘: <code>*</code>;</p> <p>除: <code>/</code>;</p> <p>指数: <code>^</code>;</p> <p>括号: <code>(``)</code>;</p> <pre><code class=language-matlab># MATLAB Commands
+&gt;&gt; a = 3;
+&gt;&gt; b = 2;
+&gt;&gt; c = -6;
+&gt;&gt; x1 = (-b+sqrt(b^2-4*a*c))/(2*a)
+
+x1 =
+
+    1.1196
+&gt;&gt; x2 = (-b-sqrt(b^2-4*a*c))/(2*a)
+
+x2 =
+
+   -1.7863
+</code></pre> <h3 id=matlab_5>Matlab 函数</h3> <blockquote> <p>matlab函数调用也与其他编程语言大致相同</p> </blockquote> <p>如:</p> <pre><code class=language-python># Example Functions
+y = fun(x)
+y = sin(x)
+y = log10(x)
+</code></pre> <blockquote> <p>值得一提的是，matlab本身是为矩阵打造的，所以matlab函数的参数可以是一个矩阵，如</p> </blockquote> <pre><code class=language-matlab># MATLAB Commands
+&gt;&gt; x = [0, pi/2, pi, 3*pi/2, 2*pi];
+&gt;&gt; sin(x)
+
+ans =
+
+         0    1.0000    0.0000   -1.0000   -0.0000
+</code></pre> <p><code>min</code>函数</p> <pre><code class=language-matlab># MATLAB Commands
+&gt;&gt; a = min(ans)
+
+a =
+
+    -1
+&gt;&gt; [a,I] = min(ans) # 当提供两个变量时，min会返回值(第一个变量)，值的下标（第二个变量）
+
+a =
+
+    -1
+
+
+I =
+
+     4
+</code></pre> <p><code>plot(x, y)</code>函数</p> <pre><code class=language-matlab>&gt;&gt; plot(x, ans)
+</code></pre> <p><img src=https://picgo-1252947055.cos.ap-guangzhou.myqcloud.com/plot.png alt=function style=zoom:50%;></p> <h2 id=_1>向量和矩阵的创建</h2> <blockquote> <p>简单的函数例子</p> </blockquote> <div class=arithmatex>\[ y = 3x^2 + 2x-6 \]</div> <h3 id=_2>创建向量</h3> <pre><code class=language-matlab>&gt;&gt; x = [-2, -1, 0, 1, 2]    # 创建行向量
+
+x =
+
+    -2    -1     0     1     2
+
+&gt;&gt; xCol = [-2;-1;0;1;2]     # 创建列向量
+
+xCol =
+
+    -2
+    -1
+     0
+     1
+     2
+&gt;&gt; y = [-2,-5,-6,-1,10]
+
+y =
+
+    -2    -5    -6    -1    10
+
+&gt;&gt; plot(x, y)
+</code></pre> <p><img src=https://picgo-1252947055.cos.ap-guangzhou.myqcloud.com/plot_2.png alt=function style=zoom:50%;></p> <h3 id=_3>创建矩阵</h3> <div class=arithmatex>\[ \left[ \begin{array}{ccc} a_{11}&amp; a_{12} &amp; a_{13} \\ a_{21}&amp; a_{22} &amp; a_{23} \\ a_{31}&amp; a_{32} &amp; a_{33} \end{array} \right] \]</div> <blockquote> <p>例： 创建一个3 x 3矩阵</p> </blockquote> <div class=arithmatex>\[ \left[ \begin{array}{ccc} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{array} \right] \]</div> <pre><code class=language-matlab># MATLAB Commands
+&gt;&gt; M = [1, 2, 3; 4, 5, 6;7, 8, 9]
+
+M =
+
+     1     2     3
+     4     5     6
+     7     8     9
+</code></pre> <h3 id=_4>矩阵创建函数</h3> <ul> <li> <p><code>eye</code>: 单位矩阵</p> </li> <li> <p><code>ones</code>: 矩阵赋值为<code>1</code></p> </li> <li> <p><code>zeros</code>: 矩阵赋值为<code>0</code></p> </li> <li> <p><code>rand</code>: 矩阵赋值为随机值</p> </li> <li> <p><code>diag</code>: 三角矩阵</p> </li> </ul> <pre><code class=language-matlab># MATLAB Commands
+&gt;&gt; e = eye(5)
+
+e =
+
+     1     0     0     0     0
+     0     1     0     0     0
+     0     0     1     0     0
+     0     0     0     1     0
+     0     0     0     0     1
+
+&gt;&gt; x = zeros(5)
+
+x =
+
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+     0     0     0     0     0
+
+&gt;&gt; x = zeros(5, 2)  # 五行二列矩阵
+
+x =
+
+     0     0
+     0     0
+     0     0
+     0     0
+     0     0
+
+&gt;&gt; x = rand(3)
+
+x =
+
+    0.0975    0.9575    0.9706
+    0.2785    0.9649    0.9572
+    0.5469    0.1576    0.4854
+</code></pre> <h2 id=_5>向量和矩阵的操作</h2> <blockquote> <p>之前提到的简单函数</p> </blockquote> <div class=arithmatex>\[ y = 3x^2 + 2x-6 \]</div> <p><img src=https://picgo-1252947055.cos.ap-guangzhou.myqcloud.com/plot_2.png alt=function style=zoom:50%;></p> <blockquote> <p>显然，输出与我们熟知的二次函数曲线还是有差距的，那么，如何得到一条相对光滑的曲线呢？</p> </blockquote> <h3 id=_6>向量的计算</h3> <blockquote> <p>我们尝试下直接对x向量进行运算</p> </blockquote> <pre><code class=language-matlab># MATLAB Commands
+&gt;&gt; x = -2:0.1:2;
+&gt;&gt; y = 3 * x^2 + 2*x -6
+错误使用  ^  (line 51)
+用于对矩阵求幂的维度不正确。请检查并确保矩阵为方阵并且幂为标量。要执行按元素矩阵求幂，请使用 '.^'。
+</code></pre> <blockquote> <p><strong>注意</strong>：<code>*</code>, <code>^</code>, <code>/</code> 在matlab中都是优先用于矩阵运算的，如果我们想做元素级别的操作(Element-wise operations),就该用到如下的运算符：<code>.*</code>, <code>./</code>, <code>.^</code></p> </blockquote> <p>举例：</p> <pre><code class=language-matlab>v1 [1, 2, 3, 4]
+v2 [2, 4, 6, 8]
+
+v1.*v2 = [1*2, 2*4, 3*6, 4*8]
+v1./v2 = [1/2, 2/4, 3/6, 4/8]
+v1.^2 = [1^2, 2^2, 3^2, 4^2]
+</code></pre> <blockquote> <p>由于矩阵的<code>+</code>, <code>-</code>以及数乘运算并不特殊，所以这些运算均无需特殊化处理</p> </blockquote> <pre><code class=language-matlab>v1 + v2 = [1+2, 2+4, 3+6, 4+8]
+v1 - v2 = [1-2, 2-4, 3-6, 4-8]
+</code></pre> <blockquote> <p>回到一开始的操作</p> </blockquote> <pre><code class=language-matlab># MATLAB Commands
+&gt;&gt; x = -2:0.1:2;
+&gt;&gt; y = 3*x.^2 + 2*x - 6
+
+y =
+
+  列 1 至 9
+
+    2.0000    1.0300    0.1200   -0.7300   -1.5200   -2.2500   -2.9200   -3.5300   -4.0800
+
+  列 10 至 18
+
+   -4.5700   -5.0000   -5.3700   -5.6800   -5.9300   -6.1200   -6.2500   -6.3200   -6.3300
+
+  列 19 至 27
+
+   -6.2800   -6.1700   -6.0000   -5.7700   -5.4800   -5.1300   -4.7200   -4.2500   -3.7200
+
+  列 28 至 36
+
+   -3.1300   -2.4800   -1.7700   -1.0000   -0.1700    0.7200    1.6700    2.6800    3.7500
+
+  列 37 至 41
+
+    4.8800    6.0700    7.3200    8.6300   10.0000
+&gt;&gt; plot(x, y)
+</code></pre> <p><img src=https://picgo-1252947055.cos.ap-guangzhou.myqcloud.com/plot_smoother.png alt=Smoother style=zoom:50%;></p> <h3 id=_7>访问矩阵元素</h3> <blockquote> <p>如下矩阵： 横向分别表示周一至周五，纵向则分别表示下午1点至6点，其值指的是相应时间点的<code>污染指数</code></p> </blockquote> <div class=arithmatex>\[ data =\left[ \begin{array}{ccc} 18 &amp; 32 &amp; 26 &amp; 28 &amp; 46 \\ 25 &amp; 42 &amp; 35 &amp; 30 &amp; 52 \\ 43 &amp; 44 &amp; 37 &amp; 52 &amp; 54 \\ 49 &amp; 38 &amp; 59 &amp; 54 &amp; 55 \\ 55 &amp; 48 &amp; 61 &amp; 69 &amp; 61 \\ 48 &amp; 34 &amp; 56 &amp; 42 &amp; 56 \end{array} \right] \]</div> <blockquote> <p>如果我们需要得到其中某个元素的值，那么如<code>x = data(5, 3)</code>, 我们就取得了该矩阵<code>第五行</code>, <code>第三列</code>的元素值，即<code>61</code>.</p> <p>如果我们需要获得一个更大的子集呢？</p> <p>比如我们要分别取得<code>周二到周四</code>下午<code>1点</code>和下午<code>5点</code>的污染指数：</p> </blockquote> <pre><code class=language-matlab># MATLAB commands
+&gt;&gt; rows = [1, 5];
+&gt;&gt; cols = 2: 4;
+&gt;&gt; subdata = data(rows, cols);
+</code></pre> <div class=arithmatex>\[ subdata=\left[ \begin{array}{ccc} 32 &amp; 26 &amp; 28 \\ 48 &amp; 61 &amp; 69 \end{array} \right] \]</div> <blockquote> <p>我们经常需要获取某一纬度的元素（在这个例子中某一行或者某一列的元素），matlab为这个操作提供了简便的方式，比如我们需要获取第一列的元素：</p> </blockquote> <pre><code class=language-matlab># MATLAB commands
+&gt;&gt; col1 = data(:, 1);
+</code></pre> <h3 id=_8>矩阵的统计函数</h3> <blockquote> <p>如下矩阵： 横向分别表示科目，纵向则分别表示不同的学生，其值指的是相应学生对应科目的<code>考试成绩</code></p> </blockquote> <div class=arithmatex>\[ scores=\left[ \begin{array}{ccc} 85 &amp; 88 &amp; 92 \\ 88 &amp; 95 &amp; 90 \\ 40 &amp; 60 &amp; 75 \\ 60 &amp; 82 &amp; 82 \end{array} \right] \]</div> <pre><code class=language-matlab># MATLAB commands
+&gt;&gt; testAvg = mean(scores)
+
+testAvg =
+
+   68.2500   81.2500   84.7500 # testAvg 得出了每一列的平均值，即每门科目的平均值
+
+</code></pre> <blockquote> <p><code>testAvg</code> 得出了每一列的平均值，即每门科目的平均值,因此<code>mean</code>函数实际上默认将每一列作为一个数据集，所得出来的行向量为每一列元素的平均值</p> <p>如果我们想计算各个学生每门科目的平均值呢？</p> </blockquote> <pre><code class=language-matlab># MATLAB commands
+&gt;&gt; studentAvg = mean(scores, 2)
+
+studentAvg =
+
+   88.3333
+   91.0000
+   58.3333
+   74.6667
+</code></pre> <blockquote> <p><code>mean</code>的第二个参数指的是函数运用的<code>维度</code>, 在这里即<code>行向量</code></p> <p>最后，我们想要计算出所有成绩的平均值，这里我们有两种思路，一是先计算出每一列的平均值，再对该平均值向量运用<code>mean</code>函数， 二是直接将<code>scores</code>矩阵转为一个一维向量，再运用<code>mean</code>函数来计算平均值</p> </blockquote> <pre><code class=language-matlab># MATLAB commands
+&gt;&gt; mean(mean(scores))
+
+ans =
+
+   78.0833
+
+&gt;&gt; mean(scores(:))
+
+ans =
+
+   78.0833
+</code></pre> <blockquote> <p>除了<code>mean</code>以外，还有许多相关的统计函数如<code>max</code>, <code>min</code>, <code>std</code>在matlab中都已集成，可以自行尝试。</p> </blockquote> <h3 id=_9>指定数组的大小和长度</h3> <blockquote> <p>指定有如下属性的向量和矩阵</p> </blockquote> <pre><code class=language-matlab>v &lt;1x24 double&gt;
+A &lt;24x30 double&gt;
+</code></pre> <p>分别执行<code>length</code>函数</p> <pre><code class=language-matlab># MATLAB commands
+&gt;&gt; n = length(v)
+n = 
+        24
+&gt;&gt; m = length(A)
+m = 
+        30
+</code></pre> <blockquote> <p>对于向量，无论是行向量还是列向量，<code>length</code>函数都会返回向量中元素的个数，然而，如果对于矩阵，<code>length</code>则会返回<strong>其较大的一个纬度的数值</strong>，这就会造成一定的困扰，所以，对于矩阵</p> </blockquote> <pre><code class=language-matlab>&gt;&gt; [nrows, ncols] = size(A);
+nrows 24
+ncols 30
+</code></pre> <blockquote> <p>我们选择使用<code>size</code>函数，以保证每一个值都被正常的接受</p> </blockquote> <h2 id=_10>图像处理工具包</h2> <blockquote> <p><code>Image Processing Toolbox</code></p> </blockquote> <h3 id=_11>加载与保存图像</h3> <p>灰度图像：</p> <pre><code class=language-matlab># MATLAB commands
+&gt;&gt; moon = imread('Fig0338(a)(blurry_moon).tif');
+moon &lt;540x466 uint8&gt;    # 以矩阵形式保存
+&gt;&gt; imshow(moon)
+</code></pre> <blockquote> <p>我们可以发现图像是以<code>矩阵</code>的形式存储的</p> </blockquote> <p><img src=https://picgo-1252947055.cos.ap-guangzhou.myqcloud.com/moon.png alt=moon style=zoom:50%;></p> <blockquote> <p>对图像进行一系列处理后保存</p> </blockquote> <pre><code class=language-matlab># MATLAB commands
+&gt;&gt; imwrite(newMoon, 'newMoonPic.png');
+</code></pre> <blockquote> <p>彩色图像：</p> </blockquote> <pre><code class=language-matlab># MATLAB commands
+&gt;&gt; lena = imread('lena_std.bmp');
+lena &lt;512x512x3 uint8&gt;  # 以矩阵形式保存
+&gt;&gt; imshow(lena)
+</code></pre> <p><img src=https://picgo-1252947055.cos.ap-guangzhou.myqcloud.com/lena.png alt=lena style=zoom:50%;></p> <blockquote> <p>我们可以发现，彩色图像是用一个<code>三维矩阵</code>存储的</p> </blockquote> <h3 id=_12>图像矩阵处理</h3> <blockquote> <p><code>灰度图像</code>是一个二维矩阵表示的</p> </blockquote> <pre><code class=language-matlab># MATLAB commands
+&gt;&gt; grayMan = imread('Fig2.22(b).jpg');
+&gt;&gt; imshow(grayMan)
+</code></pre> <p><img src=https://picgo-1252947055.cos.ap-guangzhou.myqcloud.com/greyMan.png alt=GreyMen style=zoom:50%;></p> <p>截取一部分</p> <pre><code class=language-matlab>&gt;&gt; Icrop = grayMan(32:101,87:175);
+&gt;&gt; imshow(Icrop)
+</code></pre> <p><img src=https://picgo-1252947055.cos.ap-guangzhou.myqcloud.com/Icorp.png alt=Icrop style=zoom:50%;></p> <blockquote> <p><code>彩色图像</code>是一个三维矩阵表示的</p> </blockquote> <pre><code class=language-matlab># MATLAB commands
+&gt;&gt; I = imread('lena_std.bmp');
+&gt;&gt; Ired = I(:,:,1); # 红分量
+&gt;&gt; Igreen = I(:,:,2); # 绿分量
+&gt;&gt; Iblue = I(:,:,3); # 蓝分量
+</code></pre> <p>截取一个<code>彩色图像</code></p> <pre><code class=language-matlab>&gt;&gt; Icrop = I(100:300, 60:490, :);
+</code></pre> <blockquote> <p>注意，截取的是前两维的子集，第三维用<code>:</code>全选</p> <p>我们也可以对图像矩阵进行修改，比如我们显示出三个分量的图像：</p> </blockquote> <pre><code class=language-matlab># MATLAB commands
+&gt;&gt; I = imread('lena_std.bmp');
+&gt;&gt; Ired = I;
+&gt;&gt; Ired(:,:,2) = 0;
+&gt;&gt; Ired(:,:,3) = 0;
+&gt;&gt; Igreen = I;
+&gt;&gt; Igreen(:,:,1) = 0;
+&gt;&gt; Igreen(:,:,3) = 0;
+&gt;&gt; Iblue = I;
+&gt;&gt; Iblue(:,:,1) = 0;
+&gt;&gt; Iblue(:,:,2) = 0;
+
+&gt;&gt; subplot(2,2,1);imshow(I);title('Origin');
+&gt;&gt; subplot(2,2,2);imshow(Ired);title('R');
+&gt;&gt; subplot(2,2,3);imshow(Igreen);title('G');
+&gt;&gt; subplot(2,2,4);imshow(Iblue);title('B');
+</code></pre> <p><img src=https://picgo-1252947055.cos.ap-guangzhou.myqcloud.com/RGB.png alt=RGB style=zoom:50%;></p> <h3 id=_13>转换图像数据类型</h3> <blockquote> <p><code>Gamma Adjustment</code>伽马校准</p> </blockquote> <div class=arithmatex>\[ I_{new} = 255 * \left( \frac{I_{old}}{255} \right)^y \]</div> <p>其中<code>y</code>为校准参数</p> <pre><code class=language-matlab># MATLAB commands
+&gt;&gt; I1 = imread('Fig0338(a)(blurry_moon).tif');
+&gt;&gt; gamma = 0.5;
+&gt;&gt; I2 = 255*(I1/255).^gamma;
+错误使用  .^ 
+整数只能提升为正整数幂。
+</code></pre> <blockquote> <p>我们可以发现这个操作matlab报错了，原因是<code>imread</code>读取的矩阵数据类型为<code>uint8</code>，运算后会失去数据，我们可以使用<code>im2double</code>函数将原<code>uint8</code>数字类型转为<code>double</code>型，方便进行运算</p> </blockquote> <pre><code class=language-matlab># MATLAB commands
+&gt;&gt; I1 = imread('Fig0338(a)(blurry_moon).tif');
+&gt;&gt; I2 = im2double(I1);
+&gt;&gt; gamma = 0.5;
+&gt;&gt; I2 = I2.^gamma;
+&gt;&gt; subplot(1,2,1);imshow(I1);title('Origin');
+&gt;&gt; subplot(1,2,2);imshow(I2);title('Adjusted');
+</code></pre> <p><img src=https://picgo-1252947055.cos.ap-guangzhou.myqcloud.com/gamma.png alt=gamma style=zoom:50%;></p> <h3 id=_14>空间图像过滤</h3> <blockquote> <p>加强部分图像属性或过滤图像</p> </blockquote> <p><code>fspecial</code>函数，以及常用过滤参数</p> <pre><code class=language-matlab>fspecial('type', parameters)
+</code></pre> <p><code>Average</code>:</p> <p><code>Disk</code>:</p> <p><code>Gaussian</code>:</p> <p><code>Laplacian</code>:</p> <p><code>Log</code>:</p> <p><code>Motion</code>:</p> <p><code>Prewitt</code>:</p> <p><code>Sobel</code>:</p> <blockquote> <p>我们用<code>laplacian</code>转换来提取月球图像的边缘</p> </blockquote> <pre><code class=language-matlab># MATLAB commands
+&gt;&gt; moon = imread('Fig0338(a)(blurry_moon).tif');
+&gt;&gt; h = fspecial('laplacian', 0.5);
+&gt;&gt; newMoon = imfilter(moon, h);
+&gt;&gt; imshow(newMoon);
+</code></pre> <p><img src=https://picgo-1252947055.cos.ap-guangzhou.myqcloud.com/edge.png alt=edge style=zoom:50%;></p> <blockquote> <p>我们还可以做一些操作使得图像更锐利</p> </blockquote> <pre><code class=language-matlab># MATLAB commands
+&gt;&gt; sharpend = moon - newMoon;
+&gt;&gt; subplot(1,3,1);imshow(moon);title('origin');
+&gt;&gt; subplot(1,3,2);imshow(newMoon);title('edge');
+&gt;&gt; subplot(1,3,3);imshow(sharpend);title('sharpened');
+</code></pre> <p><img src=https://picgo-1252947055.cos.ap-guangzhou.myqcloud.com/laplacian_trans.png alt=processed style=zoom:50%;></p> <h2 id=matlab_6>Matlab流程控制</h2> <blockquote> <p>流程控制是任何编程语言都共有的属性之一，<code>matlab</code>也不例外</p> </blockquote> <h3 id=for>写一个<code>for</code>循环</h3> <blockquote> <p>假设一个场景，年化率是<code>0.02</code>，初始资金为<code>20000</code>,需要将之后一百年的资金状况计算出来并存入数组</p> </blockquote> <pre><code class=language-matlab># MATLAB script
+r = 0.02;
+balance = zero(1, 100);
+balance(1) = 20000;
+for k = 1: 99
+    balance(k+1) = (1+r) * balance(k);
+end
+</code></pre> <h3 id=if-else><code>If</code>-<code>ELSE</code>语句</h3> <blockquote> <p>假设有如下的场景，考虑停车费用问题</p> </blockquote> <p><img src=https://picgo-1252947055.cos.ap-guangzhou.myqcloud.com/parking.png alt=parking style=zoom:50%;></p> <pre><code class=language-matlab># MATLAB script
+if hours &lt;= 1
+    fee = 0;
+elseif hours &gt; 1 &amp; hours &lt; 7
+    fee = 5*(hours - 1);
+else
+    fee = 35;
+end
+</code></pre> <hr> <div class=md-source-file> <small> 最后更新: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 15, 2022</span> </small> </div> </article> </div> </div> <a href=# class="md-top md-icon" data-md-component=top data-md-state=hidden> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg> 回到页面顶部 </a> </main> <footer class=md-footer> <nav class="md-footer__inner md-grid" aria-label=页脚> <a href=../../%E4%B8%93%E4%B8%9A%E8%AF%BE/ class="md-footer__link md-footer__link--prev" aria-label="上一页: 专业课程" rel=prev> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg> </div> <div class=md-footer__title> <div class=md-ellipsis> <span class=md-footer__direction> 上一页 </span> 专业课程 </div> </div> </a> <a href=../julia/ class="md-footer__link md-footer__link--next" aria-label="下一页: Julia" rel=next> <div class=md-footer__title> <div class=md-ellipsis> <span class=md-footer__direction> 下一页 </span> Julia </div> </div> <div class="md-footer__button md-icon"> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg> </div> </a> </nav> <div class="md-footer-meta md-typeset"> <div class="md-footer-meta__inner md-grid"> <div class=md-copyright> Made with <a href=https://squidfunk.github.io/mkdocs-material/ target=_blank rel=noopener> Material for MkDocs </a> </div> <div class=md-social> <a href=https://github.com/eecse/CS-Learning-Notes target=_blank rel=noopener title=github.com class=md-social__link> <svg xmlns=http://www.w3.org/2000/svg viewbox="0 0 496 512"><!-- Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> </a> </div> </div> </div> </footer> </div> <div class=md-dialog data-md-component=dialog> <div class="md-dialog__inner md-typeset"></div> </div> <script id=__config type=application/json>{"base": "../..", "features": ["header.autohide", "navigation.tracking", "navigation.top", "search.highlight", "search.share", "search.suggest", "content.code.annotate"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script> <script src=../../assets/javascripts/bundle.467223ff.min.js></script> <script src=../../javascripts/mathjax.js></script> <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script> </body> </html>

@@ -6,6 +6,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://team.eecs.pro/Latex/</loc>
+         <lastmod>2022-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://team.eecs.pro/Linux/script/</loc>
+         <lastmod>2022-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://team.eecs.pro/Linux/shell/</loc>
+         <lastmod>2022-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://team.eecs.pro/%E4%B8%93%E4%B8%9A%E8%AF%BE/</loc>
          <lastmod>2022-03-15</lastmod>
          <changefreq>daily</changefreq>
@@ -22,6 +37,16 @@
     </url>
     <url>
          <loc>https://team.eecs.pro/%E6%B5%8B%E8%AF%95/test/</loc>
+         <lastmod>2022-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://team.eecs.pro/%E7%A7%91%E5%AD%A6%E8%AE%A1%E7%AE%97/julia/</loc>
+         <lastmod>2022-03-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://team.eecs.pro/%E7%A7%91%E5%AD%A6%E8%AE%A1%E7%AE%97/matlab/</loc>
          <lastmod>2022-03-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
