@@ -86,7 +86,10 @@ nav:
     - '专业课程': '专业课/index.md'
   - Matlab:
     - 'Matlab': 'Matlab/index.md'
-  - 随笔:
-    - '测试': '测试/test.md'
   - Latex:
     - 'Latex': 'Latex/index.md'
+  - Linux:
+    - 'Shell': 'Linux/shell.md'
+    - 'Script': 'Linux/script.md'
+  - 随笔:
+    - '测试': '测试/test.md'
