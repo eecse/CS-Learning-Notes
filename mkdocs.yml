@@ -5,7 +5,7 @@ site_description: >-
   加州大学伯克利分校课程笔记
 
 repo_name: UCB-Tutorial
-repo_url: https://github.com/PointBreaker/UCB-Tutorial
+repo_url: https://github.com/PointBreaker/CS-Learning-Notes
 
 theme:
   name: material
