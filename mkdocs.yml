@@ -1,11 +1,11 @@
 site_name: 计算机学习笔记
-site_url: https://pointbreaker.github.io
+site_url: https://team.eecs.pro/CS-Learning-Notes
 site_author: Bobby
 site_description: >-
   我的笔记
 
 repo_name: CS-Learning-Notes
-repo_url: https://github.com/PointBreaker/CS-Learning-Notes
+repo_url: https://github.com/eecse/CS-Learning-Notes
 
 theme:
   name: material
@@ -65,7 +65,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/PointBreaker/CS-Learning-Notes
+      link: https://github.com/eecse/CS-Learning-Notes
 
 nav:
   - 前言: 'index.md'
