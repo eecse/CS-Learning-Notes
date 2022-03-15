@@ -1,0 +1,7 @@
+# output folder
+temp
+site
+
+# output file
+*.out
+*.o
