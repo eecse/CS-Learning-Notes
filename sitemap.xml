@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://team.eecs.pro/exercise/python/</loc>
+         <lastmod>2022-03-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://team.eecs.pro/%E4%B8%93%E4%B8%9A%E8%AF%BE/</loc>
          <lastmod>2022-03-18</lastmod>
          <changefreq>daily</changefreq>
