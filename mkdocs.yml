@@ -96,5 +96,5 @@ nav:
   - 随笔:
     - '测试': '测试/test.md'
     - '练习': 'exercise/python.md'
-  - 数据结构
+  - 数据结构:
     - 'CS61B': 'CS61B/lecture1.md'
