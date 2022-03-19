@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://team.eecs.pro/CS61B/lecture1/</loc>
+         <lastmod>2022-03-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://team.eecs.pro/Latex/</loc>
          <lastmod>2022-03-19</lastmod>
          <changefreq>daily</changefreq>
